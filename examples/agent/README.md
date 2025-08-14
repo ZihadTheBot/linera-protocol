@@ -20,12 +20,22 @@ Assume a Linera Node Service is running on `localhost:8080` and is connected to 
 network (local or otherwise).
 
 ```bash
-export OPENAI_API_KEY="..." # Get your OpenAI API key here: https://openai.com/index/openai-api/
-cargo run
-I'm the Linera agent. How can I help! (Type 'exit' to quit.)
-> Hey! What's my default chain?
-Req: query { chains { default } }
-========================== Response ============================
-{"data":{"chains":{"default":"01a7d54c59b43084ae49ebc490bb3c7c1f0924c18e93e62ecddfaf721c98e493"}},"errors":null}
-================================================================
-```
+#!/bin/bash
+# Git commit script for AI Agent - Zihad
+
+# Configure Git identity (only needed once)
+git config --global user.name "AI_Agent_Zihad"
+git config --global user.email "zihadsk44@gmail.com"
+
+# Navigate to project folder (AI agent's workspace)
+cd /path/to/project || exit
+
+# Stage all modified and new files
+git add .
+
+# Commit with a dynamic AI message
+commit_message="Auto-commit from AI Agent at $(date '+%Y-%m-%d %H:%M:%S') - Hi from zihad"
+git commit -m "$commit_message"
+
+# Push to GitHub main branch
+git push origin main
